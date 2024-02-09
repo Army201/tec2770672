@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background-color: #fff;   
+    min-height: 100vh;  
+    font-family: 'Poppins', 'Sans-serif';     
+    margin: 0;
+    padding: 0;                         
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    header{
+        img{
+            margin-top: 147px;
+            margin-bottom: 100px;
+        }
+    }
+
+        section.homepage{
+            display: flex;
+            flex-direction: column;
+        
+        a:is(:link, :visited){
+            display: flex;
+            color: #fff;
+            border-radius: 50px;
+            background-color: #B08968;
+            font-size: 32px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 400;
+            justify-content: center;
+            align-items: center;
+            width: 290px;
+            height: 64px;
+        }
+        a:is(:hover){
+            border: 2px solid #eed6c0;
+            background-color: #DDB892;
+            color: #EDE0D4;
+        }
+    }
+
+        section.login{
+            menu{
+                padding: 0;
+                display: flex;
+                a:is(:link, :visited){
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    text-decoration: none;
+                    height: 74px;
+                    width: 341px;
+                }
+                a:first-child{
+                    background-color: #B08968;
+                    color: #EDE0D4;
+                    border-radius: 50px 0 0 50px;
+                }
+                a:last-child{
+                    background-color: #EDE0D4;
+                    color: #7F5539;
+                    border-radius: 0 50px 50px 0;
+
+                }
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                margin-top: 40px;
+
+                input, button{
+                    border: none;
+                    background-color: #EDE0D4;
+                    border-radius: 50px;
+                    padding: 20px;
+                    width: 380px;
+                }
+            }
+            button{
+                display: flex;
+                color: #fff;
+                border: 2px solid #7F5539;
+                border-radius: 50px;
+                background-color: #B08968;
+                font-size: 32px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 400;
+                justify-content: center;
+                align-items: center;
+                width: 380px;
+                height: 64px;
+                transition: all 0.4s ease-in;
+            }
+            button:is(:hover){
+                border: 2px solid #eed6c0;
+                background-color: #DDB892;
+                cursor: pointer;
+                color: #EDE0D4;
+            }
+        }
+
+}
+
