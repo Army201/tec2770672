@@ -26,19 +26,23 @@
         </header>
         <section class="module">
             <h1>MODULE USERS</h1>
+            <a class="add" href="add.html">
+                <img src="../../images/ico-add.svg" alt="Add" width="30px">
+                Add User
+            </a>
             <table>
                 <tbody>
                     <tr>
                         <td><img src="../../images/ico-user.svg" alt=""></td>
                         <td>User 01</td>
                         <td>
-                            <a href="" class="show">
+                            <a href="show.html" class="show">
                                 <img src="../../images/search.svg" alt="">
                             </a>
-                            <a href="" class="edit">
+                            <a href="edit.html" class="edit">
                                 <img src="../../images/pen.svg" alt="">
                             </a>
-                            <a href="" class="delete">
+                            <a href="javascript:;" class="delete">
                                 <img src="../../images/delete.svg" alt="">
                             </a>
                         </td>
@@ -47,13 +51,13 @@
                         <td><img src="../../images/ico-user2.svg" alt=""></td>
                         <td>User 02</td>
                         <td>
-                            <a href="" class="show">
+                            <a href="show.html" class="show">
                                 <img src="../../images/search.svg" alt="">
                             </a>
-                            <a href="" class="edit">
+                            <a href="edit.html" class="edit">
                                 <img src="../../images/pen.svg" alt="">
                             </a>
-                            <a href="" class="delete">
+                            <a href="javascript:;" class="delete">
                                 <img src="../../images/delete.svg" alt="">
                             </a>
                         </td>
@@ -62,13 +66,13 @@
                         <td><img src="../../images/ico-user.svg" alt=""></td>
                         <td>User 03</td>
                         <td>
-                            <a href="" class="show">
+                            <a href="show.html" class="show">
                                 <img src="../../images/search.svg" alt="">
                             </a>
-                            <a href="" class="edit">
+                            <a href="edit.html" class="edit">
                                 <img src="../../images/pen.svg" alt="">
                             </a>
-                            <a href="" class="delete">
+                            <a href="javascript:;" class="delete">
                                 <img src="../../images/delete.svg" alt="">
                             </a>
                         </td>
@@ -77,13 +81,13 @@
                         <td><img src="../../images/ico-user2.svg" alt=""></td>
                         <td>User 04</td>
                         <td>
-                            <a href="" class="show">
+                            <a href="show.html" class="show">
                                 <img src="../../images/search.svg" alt="">
                             </a>
-                            <a href="" class="edit">
+                            <a href="edit.html" class="edit">
                                 <img src="../../images/pen.svg" alt="">
                             </a>
-                            <a href="" class="delete">
+                            <a href="javascript:;" class="delete">
                                 <img src="../../images/delete.svg" alt="">
                             </a>
                         </td>
@@ -92,13 +96,13 @@
                         <td><img src="../../images/ico-user2.svg" alt=""></td>
                         <td>User 05</td>
                         <td>
-                            <a href="" class="show">
+                            <a href="show.html" class="show">
                                 <img src="../../images/search.svg" alt="">
                             </a>
-                            <a href="" class="edit">
+                            <a href="edit.html" class="edit">
                                 <img src="../../images/pen.svg" alt="">
                             </a>
-                            <a href="" class="delete">
+                            <a href="javascript:;" class="delete">
                                 <img src="../../images/delete.svg" alt="">
                             </a>
                         </td>
@@ -106,7 +110,32 @@
                 </tbody>
             </table>
         </section>
-
+        <script src="../../js/sweetalert2.js"></script>
+        <script src="../../js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('body').on('click', '.delete', function () {
+                    Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#7F5539",
+                    cancelButtonColor: "#B08968",
+                    confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "The user was deleted.",
+                        icon: "success",
+                        confirmButtonColor: "#7F5539",
+                    })
+                }                   
+            })
+        })
+    })
+        </script>
    </main>
 </body>
 </html>
