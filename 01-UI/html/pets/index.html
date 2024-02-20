@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Pets</title>
+    <link rel="stylesheet" href="../../css/master.css">
+
+
+</head>
+
+
+<body>
+    <main>
+        <header class="nav level-1">
+            <a href="../dashboard.html">
+                <img src="../../images/ico-back.svg" alt="back">
+            </a>
+            <img src="../../images/logo.svg" width="200px" alt="Logo">
+            
+            <a href="" class="mburger">
+                <img src="../../images/mburger.svg" alt="Hamburguer">
+            </a>
+        </header>
+        <section class="module">
+            <h1>MODULE PETS</h1>
+            <a class="add" href="add.html">
+                <img src="../../images/ico-add.svg" alt="Add" width="30px">
+                Add Pet
+            </a>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="../../images/icopet.svg" alt="Pet"></td>
+                        <td>
+                            <span>Pet 01</span>
+                            <span>Dog</span>
+                        </td>
+                        <td>
+                            <a href="show.html" class="show">
+                                <img src="../../images/search.svg" alt="">
+                            </a>
+                            <a href="edit.html" class="edit">
+                                <img src="../../images/pen.svg" alt="">
+                            </a>
+                            <a href="javascript:;" class="delete">
+                                <img src="../../images/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../images/icocat.svg" alt=""></td>
+                        <td>
+                            <span>Pet 02</span>
+                            <span>Cat</span>
+                        </td>
+                        <td>
+                            <a href="show.html" class="show">
+                                <img src="../../images/search.svg" alt="">
+                            </a>
+                            <a href="edit.html" class="edit">
+                                <img src="../../images/pen.svg" alt="">
+                            </a>
+                            <a href="javascript:;" class="delete">
+                                <img src="../../images/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../images/icopet.svg" alt=""></td>
+                        <td>
+                            <span>Pet 03</span>
+                            <span>Dog</span>
+                        </td>
+                        <td>
+                            <a href="show.html" class="show">
+                                <img src="../../images/search.svg" alt="">
+                            </a>
+                            <a href="edit.html" class="edit">
+                                <img src="../../images/pen.svg" alt="">
+                            </a>
+                            <a href="javascript:;" class="delete">
+                                <img src="../../images/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../images/icocat.svg" alt=""></td>
+                        <td>
+                            <span>Pet 04</span>
+                            <span>Cat</span>
+                        </td>
+                        <td>
+                            <a href="show.html" class="show">
+                                <img src="../../images/search.svg" alt="">
+                            </a>
+                            <a href="edit.html" class="edit">
+                                <img src="../../images/pen.svg" alt="">
+                            </a>
+                            <a href="javascript:;" class="delete">
+                                <img src="../../images/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../images/icopet.svg" alt=""></td>
+                        <td>
+                            <span>Pet 05</span>
+                            <span>Dog</span>
+                        </td>
+                        <td>
+                            <a href="show.html" class="show">
+                                <img src="../../images/search.svg" alt="">
+                            </a>
+                            <a href="edit.html" class="edit">
+                                <img src="../../images/pen.svg" alt="">
+                            </a>
+                            <a href="javascript:;" class="delete">
+                                <img src="../../images/delete.svg" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <script src="../../js/sweetalert2.js"></script>
+        <script src="../../js/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('body').on('click', '.delete', function () {
+                    Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#7F5539",
+                    cancelButtonColor: "#B08968",
+                    confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "The user was deleted.",
+                        icon: "success",
+                        confirmButtonColor: "#7F5539",
+                    })
+                }                   
+            })
+        })
+    })
+        </script>
+   </main>
+</body>
+</html>
