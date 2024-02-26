@@ -329,6 +329,9 @@ main{
             img.photo{
                 border-radius: 200px;
                 border: 2px solid #000;
+                height: 280px;
+                width: 280px;
+                object-fit: cover;
             }
             div.info{
                 display: grid;
