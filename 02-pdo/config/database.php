@@ -87,3 +87,18 @@
             echo "Error: " . $e->getMessage();
         }
     }
+
+    //-------------------------------------------
+    // delete Records
+    function deletePet($conx, $id){
+        try {
+            $sql = "DELETE FROM pets WHERE id = :id";
+            $stm = $conx->prepare($sql);
+            if($stm->execute(['id' => $id])){
+                $_SESSION['msg'] = 'The pet was deleted sucessfully.';
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+    }
