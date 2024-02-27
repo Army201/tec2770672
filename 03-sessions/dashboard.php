@@ -3,6 +3,11 @@
     require_once "config/app.php";
     require_once "config/database.php";
 
+    if(!isset($_SESSION['uid'])) {
+        $_SESSION['error'] = "Please login first to access dashboard.";
+        header("location: index.php");
+    }
+
 ?>
 
 
@@ -87,11 +92,14 @@
             <a href="">
                 <img src="<?php echo URLIMGS . "/ico-back.svg"?>" alt="back">
             </a>
+
                 <img src="<?php echo URLIMGS . "/logo.svg"?>" width="200px" alt="Logo">
+
             <a href="javascript:;" class="mburger">
                 <img src="<?php echo URLIMGS . "/mburger.svg"?>" alt="Hamburguer">
             </a>
         </header>
+
         <section class="dashboard">
             <h1>DASHBOARD</h1>
             <menu>
