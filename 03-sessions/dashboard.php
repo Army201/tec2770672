@@ -3,6 +3,8 @@
     require_once "config/app.php";
     require_once "config/database.php";
 
+    $user = getUser($conx, $_SESSION['uid']);
+
     if(!isset($_SESSION['uid'])) {
         $_SESSION['error'] = "Please login first to access dashboard.";
         header("location: index.php");
@@ -45,6 +47,35 @@
                 padding: 10px 20px;
                 border-radius: 50px;
             }
+            a.closem {
+                position: absolute;
+                top: 44px;
+                right: 0px;
+            }
+
+            nav {
+                color: #fff9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    border: 2px solid #fff;
+                    border-radius: 60%;
+                    object-fit: cover;
+                    height: 200px;
+                    width: 200px;
+                }
+
+                h4, h5 {
+                    margin: 0;
+                }
+
+                a.closes {
+                    border: 2px solid #fff;
+                }
+            }
         }
         div.menu.open{
             animation: openMenu 0.5s ease-in 1 forwards;
@@ -81,9 +112,12 @@
 <body>
 
     <div class="menu">
-        <a href="javascrip:;" class="closem" >X</a>
+        <a href="javascript:;" class="closem" >X</a>
         <nav>
             <a href="close.php">Close Session</a>
+            <img src="<?= URLIMGS . "/" . $user['photo']?>" alt="Photo" width="200px">
+            <h4><?=$user['fullname']?></h4>
+            <h5><?=$user['role']?></h5>
         </nav>
     </div>    
 
@@ -100,6 +134,7 @@
             </a>
         </header>
 
+        <?php if($_SESSION['urole'] == 'Admin'):?>
         <section class="dashboard">
             <h1>DASHBOARD</h1>
             <menu>
@@ -125,6 +160,22 @@
                 </ul>
             </menu>
         </section>
+
+    <?php elseif ($_SESSION['urole']== 'Customer'): ?>
+    <section class="dashboard">
+            <h1>Dashboard</h1>
+    <menu>
+        <ul>
+            <li>
+                <a href="#">
+                <img src="<?php echo URLIMGS ."/icadop.svg"?>" alt="Adoptions">
+                Module Adoptions
+                </a>
+            </li>
+        </ul>
+    </menu>
+        </section>
+    <?php endif ?>
 
    </main>
 
