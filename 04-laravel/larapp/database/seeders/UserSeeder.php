@@ -20,6 +20,8 @@ class UserSeeder extends Seeder
         $user = new User;
         $user->document = 75000001;
         $user->fullname = 'Jeon Jungkook';
+        $user->gender = 'Female';
+        $user->birthdate = '1984-01-09';
         $user->photo = 'jung.png';
         $user->phone = 3103456789;
         $user->email = 'jeonjung@gmail.com';
@@ -31,6 +33,8 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'document' => 75000002,
             'fullname' => 'Park Jimin',
+            'gender' => 'Female',
+            'birthdate' => '1982-10-13',
             'photo' => 'jimin.avif',
             'phone' => 3245674321,
             'email' => 'parkjimin@gmail.com',

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('document')->unique();
             $table->string('fullname');
+            $table->string('gender');
+            $table->date('birthdate');
             $table->string('photo')->default('icuser.svg');
             $table->string('phone');
             $table->string('email')->unique();
