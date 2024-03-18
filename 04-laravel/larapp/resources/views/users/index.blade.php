@@ -2,11 +2,12 @@
 @section('title', 'Users Page - PetsApp')
 
 @section('content')
+
 <header class="nav level-2">
     <a href="{{ route('dashboard') }}">
         <img src="{{ asset('images/ico-back.svg') }}" alt="Back">
     </a>
-    <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+    <img src="{{ asset('images/logo.svg') }}" alt="Logo" width="200px">
     <a href="javascript:;" class="mburger">
         <img src="{{ asset('images/mburger.svg') }}" alt="Menu Burger">
     </a>
@@ -30,14 +31,18 @@
                 </td>
                 <td>
                     <a href="{{ url('users/' . $user->id) }}" class="show">
-                        <img src="{{ asset('images/ico-show.svg') }}" alt="Show">
+                        <img src="{{ asset('images/search.svg') }}" alt="Show">
                     </a>
                     <a href="{{ url('users/' . $user->id . '/edit') }}" class="edit">
-                        <img src="{{ asset('images/ico-edit.svg') }}" alt="Edit">
+                        <img src="{{ asset('images/pen.svg') }}" alt="Edit">
                     </a>
-                    <a href="javascript:;" class="delete" data-id="{{ $user->id }}">
-                        <img src="{{ asset('images/ico-delete.svg') }}" alt="Delete">
-                    </a>
+                    <form action="{{url('users/' .$user->id)}}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button type="button" class="btn-delete">
+                            <img src="{{asset('images/delete.svg')}}" alt="Delete">
+                        </button>
+                    </form>
                 </td>
             </tr>
             @endforeach
@@ -69,4 +74,24 @@
         })
         </script>
     @endif
+
+<script>
+$(document).ready(function () {
+                $('body').on('click', '.btn-delete', function () {
+                    Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#7F5539",
+                    cancelButtonColor: "#B08968",
+                    confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                    $(this).parent().submit()
+                    }                   
+            })
+        })
+    })
+</script>
 @endsection

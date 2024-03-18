@@ -170,6 +170,13 @@ main{
                 }
             }
 
+            header.nav.level-2   {
+                a:last-of-type {
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+            }
+
             .mburger{
                 height: 100px;
             }
@@ -303,6 +310,24 @@ main{
                             flex-direction: column;
                             width: 140px;
                         }
+
+                        td:nth-child(3){
+                            display: flex;
+                            form{
+                                margin: 0;
+                                padding: 0;
+                                button{
+                                    background: none;
+                                    border: none;
+                                    width: 40px;
+                                    height: 40px;
+                                    cursor: pointer;
+                                    display: block;
+                                    padding: 0;
+                                }
+                            }
+                            
+                        }
                     }
                 }
             }
@@ -353,6 +378,11 @@ main{
                 width: 280px;
                 object-fit: cover;
             }
+            p.role{
+                color: #000;
+                font-size: 1.4rem;
+            }
+
             div.info{
                 display: grid;
                 gap: 0rem;
@@ -518,6 +548,45 @@ main{
         div.menu.open{
             top: 0;
             opacity: 1;
+        }
+
+        table {
+            tfoot {
+                nav {
+                    ul.pagination {
+                        list-style: none;
+                        padding: 0;
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            a:is(:link, :visited) {
+                                border: 2px solid var(--color-pri);
+                                border-radius: 30px;
+                                color: var(--color-pri);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 2rem;
+                                text-decoration: none;
+                                transition: all 0.2s ease-in;
+                                height: 50px;
+                                width: 50px;
+                            }
+                            a[rel=prev]:hover {
+                                background-color: #fff3;
+                                transform: translateX(-6px);
+                            }
+                            a[rel=next]:hover {
+                                background-color: #fff3;
+                                transform: translateX(6px);
+                            }
+                        }
+                        li.disabled {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
         }
 
 }

@@ -21,21 +21,7 @@
 
 @section('content')
 
-<div class="menu">
-    <a href="javascript:;" class="closem">
-        <img src="{{ asset('images/mburger-close.svg') }}" alt="">
-    </a>
-    <nav>
-        <img src="{{ asset('images') . '/' . Auth::user()->photo }}" alt="Photo">
-        <h4>{{ Auth::user()->fullname }}</h4>
-        <h5>{{ Auth::user()->role }}</h5>
-        <form action="{{ route('logout') }}" method="post">
-            <button class="closes">Log Out</button>
-            @csrf
-        </form>
-    </nav>
-</div>
-
+@include('layouts.menuburger')
 
 <header class="nav level-0">
     <a href="">
@@ -54,13 +40,13 @@
         <ul>
             <li>
                 <a href="{{ url('mydata') }}">
-                    <img src="{{ asset('images/ico-users.svg') }}" alt="My Data">
+                    <img src="{{ asset('images/ico-user.svg') }}" alt="My Data">
                     <span>My Data</span>
-                </a>
-            </li>
+                </a> </li>
+            
             <li>
                 <a href="{{ url('myadoptions') }}">
-                    <img src="{{ asset('images/ico-pets.svg') }}" alt="My Adoptions">
+                    <img src="{{ asset('images/icopet2.svg') }}" alt="My Adoptions">
                     <span>My Adoptions</span>
                 </a>
             </li>

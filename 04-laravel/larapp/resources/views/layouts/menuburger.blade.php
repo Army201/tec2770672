@@ -1,6 +1,6 @@
 <div class="menu">
     <a href="javascript:;" class="closem">
-        <img src="{{ asset('images/mburger-close.svg') }}" alt="">
+        <img src="{{ asset('images/mburger-close.svg') }}" alt="Close" width="50px">
     </a>
     <nav>
         <img src="{{ asset('images') . '/' . Auth::user()->photo }}" alt="Photo">

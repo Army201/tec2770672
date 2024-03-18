@@ -15,17 +15,21 @@
         </div>
     </div>
 </x-app-layout> --}}
+
 @extends('layouts.app')
 
 @section('title', 'Dashboard Page - PetsApp')
 
 @section('content')
+
 @include('layouts.menuburger')
+
+
 <header class="nav level-0">
     <a href="">
         <img src="{{ asset('images/ico-back.svg') }}" alt="Back">
     </a>
-    <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+    <img src="{{ asset('images/logo.svg') }}" alt="Logo" width="200px">
     <a href="javascript:;" class="mburger">
         <img src="{{ asset('images/mburger.svg') }}" alt="Menu Burger">
     </a>
@@ -38,19 +42,19 @@
         <ul>
             <li>
                 <a href="{{ url('users') }}">
-                    <img src="{{ asset('images/ico-users.svg') }}" alt="Users">
+                    <img src="{{ asset('images/ico-user.svg') }}" alt="Users" width="150px" height="150px">
                     <span>Module User</span>    
                 </a>
             </li>
             <li>
                 <a href="{{ url('pets') }}">
-                    <img src="{{ asset('images/ico-pets.svg') }}" alt="Pets">
+                    <img src="{{ asset('images/icopet2.svg') }}" alt="Pets" width="150px" height="150px">
                     <span>Module Pets</span>
                 </a>
             </li>
             <li>
                 <a href="{{ url('adoptions') }}">
-                    <img src="{{ asset('images/ico-adoptions.svg') }}" alt="Adoptions">
+                    <img src="{{ asset('images/icadop.svg') }}" alt="Adoptions" width="150px" height="150px">
                     <span>Module Adoptions</span>
                 </a>
             </li>
