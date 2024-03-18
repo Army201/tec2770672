@@ -27,7 +27,6 @@ class User extends Authenticatable
         'email',
         'password',
         'role'
-        
     ];
 
     /**
@@ -47,11 +46,12 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        //'password' => 'hashed',
+        'password' => 'hashed',
     ];
 
-    //RelationShip: (User has many adoptions)
+    // RelationShip: (User has many adoptions)
     public function adoptions() {
-        return $this->hasMany('App\Models\Adoption');
+        //return $this->hasMany('App\Models\Adoption');
+        return $this->hasMany(Adoption::class);
     }
 }
