@@ -334,6 +334,28 @@ main{
                             
                         }
                     }
+
+                    
+                }
+
+                tbody.adoptions {
+                    tr {
+                        justify-content: start;
+                        gap: 4rem;
+                        td:nth-child(2) {
+                            width: 220px;
+                            span:last-child {
+                                font-style: oblique;
+                            }
+                        }
+                        td:first-of-type {
+                            position: relative;
+                            img:last-child {
+                                position: absolute;
+                                left: 50px;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -400,7 +422,7 @@ main{
                     border-radius: 50px;
                     background-color: #E6CCB2;
                     padding: 10px;
-                    font-size: 18px;
+                    font-size: 14px;
                     margin: 0;
                     width: 200px;
                 }
@@ -425,9 +447,13 @@ main{
                     align-items: center;
                     justify-content: center;
                     img{
+                        border-radius: 60px;
+                        height: 80px;
                         margin-top: 0;
-                        margin-bottom: 0;
                         width: 80px;
+                        object-fit: cover;
+                        border: #DDB892;
+                        margin-bottom: 0;
                     }
                     p{
                         display: flex;
@@ -495,7 +521,7 @@ main{
             align-items: center;
             gap: 2rem;
             position: absolute;
-            top: -1000px;
+            top: -1500px;
             opacity: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -594,5 +620,10 @@ main{
             }
         }
 
+        p.no-adoptions {
+            margin-top: 2rem;
+            color: #000;
+            text-align: center;
+        }
 }
     

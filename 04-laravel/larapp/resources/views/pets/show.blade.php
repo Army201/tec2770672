@@ -13,7 +13,7 @@
     </a>
 </header>
 <section class="show">
-    <h1>Show User</h1>
+    <h1>Show Pet</h1>
     <img src="{{ asset('images/'.$pet->photo) }}" alt="Photo" class="photo">
     <p class="role">{{$pet->kind}}</p>
     <div class="info">

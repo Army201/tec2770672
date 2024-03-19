@@ -27,7 +27,7 @@
     <a href="">
         <img src="{{ asset('images/ico-back.svg') }}" alt="Back">
     </a>
-    <img src="{{ asset('images/logo.svg') }}" alt="Logo">
+    <img src="{{ asset('images/logo.svg') }}" alt="Logo" width="200px">
     <a href="javascript:;" class="mburger">
         <img src="{{ asset('images/mburger.svg') }}" alt="Menu Burger">
     </a>
