@@ -42,19 +42,19 @@
         <ul>
             <li>
                 <a href="{{ url('users') }}">
-                    <img src="{{ asset('images/ico-user.svg') }}" alt="Users" width="150px" height="150px">
+                    <img src="{{ asset('images/ico-user.svg') }}" alt="Users" width="130px" height="130px">
                     <span>Module User</span>    
                 </a>
             </li>
             <li>
                 <a href="{{ url('pets') }}">
-                    <img src="{{ asset('images/icopet2.svg') }}" alt="Pets" width="150px" height="150px">
+                    <img src="{{ asset('images/icopet2.svg') }}" alt="Pets" width="130px" height="130px">
                     <span>Module Pets</span>
                 </a>
             </li>
             <li>
                 <a href="{{ url('adoptions') }}">
-                    <img src="{{ asset('images/icadop.svg') }}" alt="Adoptions" width="150px" height="150px">
+                    <img src="{{ asset('images/icadop.svg') }}" alt="Adoptions" width="130px" height="130px">
                     <span>Module Adoptions</span>
                 </a>
             </li>

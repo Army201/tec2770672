@@ -40,13 +40,13 @@
         <ul>
             <li>
                 <a href="{{ url('mydata') }}">
-                    <img src="{{ asset('images/ico-user.svg') }}" alt="My Data">
+                    <img src="{{ asset('images/ico-user.svg') }}" alt="My Data" width="130px" height="130px">
                     <span>My Data</span>
                 </a> </li>
             
             <li>
                 <a href="{{ url('myadoptions') }}">
-                    <img src="{{ asset('images/icopet2.svg') }}" alt="My Adoptions">
+                    <img src="{{ asset('images/icopet2.svg') }}" alt="My Adoptions" width="130px" height="130px">
                     <span>My Adoptions</span>
                 </a>
             </li>
