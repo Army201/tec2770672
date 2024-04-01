@@ -26,7 +26,11 @@
 <body>
     <main>
         <header class="nav level-1">
+<<<<<<< HEAD
             <a href="">
+=======
+            <a href="/01-UI/html/dashboard.html">
+>>>>>>> 7e48f3c62667a253fa3add607a3b291639e05e87
                 <img src="<?php echo URLIMGS . "/ico-back.svg"?>" alt="back">
             </a>
             <img src="<?php echo URLIMGS . "/logo.svg"?>" width="200px" alt="Logo">
@@ -97,12 +101,7 @@
                     confirmButtonText: "Yes, delete it!"
                     }).then((result) => {
                     if (result.isConfirmed) {
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "The user was deleted.",
-                        icon: "success",
-                        confirmButtonColor: "#7F5539",
-                    })
+                        window.location.replace('delete.php?id=' + $id)
                 }                   
             })
         })

@@ -625,6 +625,7 @@ main{
             color: #000;
             text-align: center;
         }
+<<<<<<< HEAD
 
         a.forgot:is(:link, :hover) {
             color: #fff;
@@ -632,5 +633,7 @@ main{
             padding-bottom: 4px;
             border-bottom: 2px solid #fff9;
         }
+=======
+>>>>>>> 7e48f3c62667a253fa3add607a3b291639e05e87
 }
     

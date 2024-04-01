@@ -182,7 +182,7 @@ main{
                             display: flex;
                             align-items: center;
                             gap: 1rem;
-                            color: #fff;
+                            color: #7F5539;
                             text-decoration: none;
                         }
                         a{
@@ -329,6 +329,9 @@ main{
             img.photo{
                 border-radius: 200px;
                 border: 2px solid #000;
+                height: 280px;
+                width: 280px;
+                object-fit: cover;
             }
             div.info{
                 display: grid;
